@@ -1,15 +1,26 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
   <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
+  <!-- ZROBIĆ AUTOCOMPLETE ELEMENTÓW -->
   <main id="app">
-    <!-- tutaj formularz logowania i rejestracji-->
+    <form method="POST">
+      <label for="email">Podaj email</label>
+      <input type="email" name="email" id="email" placeholder="test@test.com">
+      <label for="pass">Podaj hasło</label>
+      <input type="password" name="pass" id="pass">
+
+      <button>Zaloguj się</button>
+    </form>
   </main>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
+
 </html>

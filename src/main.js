@@ -9,29 +9,29 @@ async function main() {
   console.log('main');
   const { data: { session }, error } = await supabase.auth.getSession();
   if (session) {
-
+    //test
   }
 
   if (error) {
     console.log(error)
     return;
   }
-  fetchArticles();
+  const articleList = await fetchArticles();
 }
 
 async function fetchArticles() {
-  const { data, error } = await supabase.from('article').setect();
+  const { data, error } = await supabase.from('article').select();
   if (error) {
     console.log(error);
     return;
   }
-
-  console.log(data);
   // przy tagach kazdy kolor ma inny kolor jako background (tablica kolorow)
   const articleList = data.map(article => `
-    ${artile.title}
+    ${article.title}
 
     ${new Date(article.created_at).toLocaleDateString()}
 
     `)
+
+  return articleList;
 }
