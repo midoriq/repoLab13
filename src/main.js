@@ -184,7 +184,7 @@ function deleteArticleButtons(session) {
         return;
       }
 
-      await showArticles(session); // odśwież listę po usunięciu
+      await showArticles(session);
     });
 
     articleElement.appendChild(deleteButton);
