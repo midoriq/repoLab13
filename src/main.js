@@ -36,7 +36,7 @@ async function showArticles(session) {
 }
 
 async function fetchArticles() {
-  const { data, error } = await supabase.from('article').select();
+  const { data, error } = await supabase.from('article').select().order("id");
   if (error) {
     console.log(error);
     return;
@@ -47,7 +47,7 @@ async function fetchArticles() {
       ${i > 0 ? '<hr class="my-4 border-gray-300"/>' : ''}
       <article data-article-id="${article.id}" class="bg-white rounded-lg shadow p-4 space-y-2">
         <h2 class="text-xl font-semibold text-blue-800">
-          <a href="?id=${article.id}" class="hover:underline">${article.title}</a>
+           ${article.title}
         </h2>
         ${article.subtitle ? `<h3 class="text-md text-gray-600 italic">${article.subtitle}</h3>` : ''}
         <address rel = "author" class="text-sm text-gray-500">Autor: <span class="font-medium">${article.author}</span></address>
