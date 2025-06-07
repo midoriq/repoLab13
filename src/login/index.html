@@ -1,25 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>Logowanie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <!-- ZROBIĆ AUTOCOMPLETE ELEMENTÓW -->
-  <main id="app">
-    <form method="POST">
-      <label for="email">Podaj email</label>
-      <input type="email" name="email" id="email" placeholder="test@test.com">
-      <label for="pass">Podaj hasło</label>
-      <input type="password" name="pass" id="pass">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <main id="app" class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
+    <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Zaloguj się</h1>
+    <form method="POST" class="flex flex-col gap-4">
+      <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Podaj email</label>
+      <input type="email" name="email" id="email" placeholder="test@test.com"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required autocomplete="email">
 
-      <button>Zaloguj się</button>
+      <label for="pass" class="block text-sm font-medium text-gray-700 mb-1">Podaj hasło</label>
+      <input type="password" name="pass" id="pass"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required autocomplete="current-password">
+
+      <button type="submit"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-md transition-colors">
+        Zaloguj się
+      </button>
     </form>
   </main>
+
   <script type="module" src="./main.js"></script>
 </body>
 
