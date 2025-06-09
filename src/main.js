@@ -70,9 +70,9 @@ async function addArticle(session) {
 
   addArticle.addEventListener('click', async () => {
     const dialog = document.createElement("dialog");
-    dialog.className = "bg-transparent p-6 rounded shadow-lg max-w-md mx-auto mt-20";
+    dialog.className = "p-0 border-0 bg-transparent w-full h-full flex items-center justify-center z-50";
     dialog.innerHTML = `
-    <section class="bg-white p-6 md:px-8 rounded shadow-lg max-w-md mx-auto mt-20"> 
+    <section class="bg-white w-full max-w-md mx-auto p-6 rounded shadow-lg"> 
       <h2 class="text-2xl font-bold mb-4">Dodaj artykuł</h2> 
       <form id="add-article-form" class="flex flex-col gap-4"> 
         <label>
@@ -217,10 +217,10 @@ function editArticleButtons(session) {
       }
 
       const dialog = document.createElement("dialog");
-      dialog.className = "bg-transparent p-6 rounded shadow-lg max-w-md mx-auto mt-20";
+      dialog.className = "p-0 border-0 bg-transparent w-full h-full flex items-center justify-center z-50";
       dialog.innerHTML = `
-  <section class="bg-white p-6 md:px-8 rounded shadow-lg max-w-md mx-auto mt-20"> 
-    <h2 class="text-2xl font-bold mb-4">Edytuj artykuł</h2> 
+  <section class="bg-white w-full max-w-md mx-auto p-6 rounded shadow-lg"> 
+    <h2 class="text-2xl font-bold mb-4 mx-auto">Edytuj artykuł</h2> 
     <form id="edit-article-form" class="flex flex-col gap-4"> 
       <label>
         Tytuł:
