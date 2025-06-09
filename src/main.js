@@ -158,7 +158,7 @@ function LogIn() {
   login.className = "bg-blue-500 hover:bg-blue-600 text-white text-sm px-4 py-2 rounded";
 
   login.addEventListener("click", async () => {
-    window.location.href = "./login/";
+    window.location.href = "./login/index.html";
   })
   document.getElementById("nav").appendChild(login);
 }
